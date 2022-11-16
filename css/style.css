@@ -1,0 +1,246 @@
+/* Сброс стилей */
+@import url(reset.css);
+
+/* Подключение шрифтов */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Roboto Slab', serif;
+    color: black;
+}
+
+/* Служебные стили */
+
+._container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #9e9e9e;
+    max-height: 100%;
+    position: relative;
+}
+
+/* Общие стили */
+
+.main {
+    background-color: #e0e0e0;
+}
+
+header {
+    background-color: #fff;
+    padding: 30px;
+}
+
+.header_body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 70px;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav_item + .nav_item {
+    flex-direction: row;
+    margin-left: 20px;
+}
+
+.nav_item:hover {
+    transform: scale(0.8);
+    transition: all 1.5s ease;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.controls button {
+    background-color: #fff;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.slider {
+    padding: 30px;
+    padding-bottom: 0;
+    background-color: rgb(207, 207, 207);
+}
+
+.slider_img {
+    display: none;
+    min-width: 100%;
+    max-height: 600px;
+    vertical-align: top;
+}
+
+.slider_img:hover {
+    filter: grayscale(50%); 
+    transition: all 2s ease;
+}
+
+.active {
+    display: block;
+}
+
+.cards {
+    padding: 30px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cards_body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: all 1s ease;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+.card_img {
+    display: block;
+    padding: 15px 0;
+}
+
+.author {
+    font-weight: 600;
+    font-size: 0.7em;
+    text-align: right;
+    margin-top: 10px;
+}
+
+footer {
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dark {
+    background-color: #1e272e;
+}
+
+.plans {
+    font-size: 0.8em;
+}
+
+.plans_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.plans_item {
+    flex: 30%;
+}
+
+/* Popup */
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto; /*Чтобы содержимое попапа скролилось*/
+    overflow-x: hidden; /*Чтобы контент при анимации не выходил за границы*/
+    transition: all 0.8s ease;
+}
+
+a.popup-link {
+    color: rgb(255, 0, 0);
+}
+
+.popup.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup.open .popup__content {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup__content {
+    background-color: #fff;
+    max-width: 800px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translate(0px, -100%);
+}
+
+.popup__title {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.popup__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+.advert {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 250px;
+    height: auto;
+    background-color: #fff;
+    padding: 8px;
+
+}
